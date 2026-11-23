@@ -13,8 +13,8 @@ android {
         applicationId = "com.rupeerush.user"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -77,10 +77,10 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
 
     // Ktor HTTP for Supabase REST and Edge Functions
-    implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.android)
-    implementation(libs.ktor.client.content-negotiation)
-    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation("io.ktor:ktor-client-core:2.3.12")
+    implementation("io.ktor:ktor-client-android:2.3.12")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.12")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.12")
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
