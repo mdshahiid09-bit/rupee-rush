@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:width="66dp"
-        android:height="66dp"
-        android:drawable="@drawable/img_cash_villain_icon_1795170829301"
-        android:gravity="center" />
-</layer-list>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Glow Circle -->
+    <path
+        android:fillColor="#1A00E676"
+        android:pathData="M54,54m-38,0a38,38 0 1,0 76,0a38,38 0 1,0 -76,0" />
+    <!-- Main Coin Circle -->
+    <path
+        android:fillColor="#00C853"
+        android:pathData="M54,54m-30,0a30,30 0 1,0 60,0a30,30 0 1,0 -60,0" />
+    <path
+        android:strokeColor="#B9F6CA"
+        android:strokeWidth="2"
+        android:pathData="M54,54m-27,0a27,27 0 1,0 54,0a27,27 0 1,0 -54,0" />
+    <!-- Rupee / Rush Symbol -->
+    <!-- Top Bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,38 L64,38 L64,42 L44,42 Z" />
+    <!-- Second Bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,45 L62,45 L62,49 L44,49 Z" />
+    <!-- Curve & Stem & Diagonal Leg -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,42 L48,42 L48,54 C53,54 57,51 57,47 C57,43.5 54.5,42 50,42 L50,38 C56.5,38 61,41.5 61,47 C61,51.8 57.5,56 51.5,57.5 L64,72 L58,72 L46.5,58 L44,58 L44,72 L40,72 L40,38 L44,38 Z" />
+</vector>
