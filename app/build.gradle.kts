@@ -13,8 +13,8 @@ android {
         applicationId = "com.rupeerush.user"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "1.0.5"
+        versionCode = 7
+        versionName = "1.0.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -24,8 +24,14 @@ android {
 
     signingConfigs {
         create("release") {
-            val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/release.keystore"
-            storeFile = file(keystorePath)
+            val envPath = System.getenv("KEYSTORE_PATH")
+            val kFile = if (envPath != null) {
+                val f = file(envPath)
+                if (f.exists()) f else rootProject.file(envPath)
+            } else {
+                rootProject.file("release.keystore")
+            }
+            storeFile = kFile
             storePassword = System.getenv("STORE_PASSWORD") ?: "android"
             keyAlias = System.getenv("KEY_ALIAS") ?: "rupeerush"
             keyPassword = System.getenv("KEY_PASSWORD") ?: "android"
